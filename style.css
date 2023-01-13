@@ -1,0 +1,914 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@100;200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+    font-family: poppins, sans-serif;
+    font-size: 18px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    max-width: 1440px;
+}
+
+:root {
+    --black: #151618;
+    --darkgrey: #7c7d7f;
+    --grey: #97999b;
+    --lightgrey: #f3f3f3;
+    --purple: #9105ed;
+    --darkpurple: #4300c5;
+    --burntyellow: #a85d19;
+    --deepyellow: #dd8614;
+    --lightyellow: #e7e986;
+}
+
+.main-container {
+    background-color: aqua;
+    box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.3);
+    max-width: 1440px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+    animation: header--slide-from-top--1_RXU 250ms cubic-bezier(0,0,.38,.9) 0ms forwards;
+}
+
+.content {
+    max-width: 1440px;
+    background-color: white;
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0;
+    list-style: none;
+    align-items: center;
+    height: 75px;
+    padding: 20px 30px;
+    position: relative;
+    justify-content: space-between;
+}
+
+/* .first, .second, .third {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+.logo img {
+    width: 90px;
+    cursor: pointer;
+}
+
+.dropbtn {
+    background-color: white;
+    padding: 0 1.4rem;
+    font-size: 0.7rem;
+    border: none;
+  }
+  
+  .dropdown:hover .dropbtn {
+    color: var(--darkpurple);
+    cursor: pointer;
+  }
+
+  .search {
+    max-width: 580px;
+    min-width: 300px;
+    width: 100%;
+  }
+
+  .search form {
+    margin: auto;
+    border: 1px solid var(--darkgrey);
+    display: flex;
+    flex-wrap: nowrap;
+    background: var(--lightgrey);
+    align-items: center;
+    height: 50px;
+    padding-left: 20px;
+    border-radius: 50px;
+  }
+
+  form .btn {
+    background: none;
+    border: none;
+    color: var(--darkgrey);
+    padding-right: 15px;
+    cursor: pointer;
+    position: absolute;
+  }
+
+  .fa-magnifying-glass {
+    font-size: 0.8rem;
+    left: 15px;
+  }
+
+  form input {
+    width: 100%;
+    width: 100%;
+    border: none;
+    font-size: 0.7rem;
+    padding: 7px 0;
+    margin-left: 25px;
+    margin-right: 20px;
+    background: none;
+    width: none;
+  }
+
+  form input:focus {
+    outline: none;
+  }
+
+  .second h4 {
+    font-size: 0.7rem;
+    font-weight: 400;
+    padding-left: 20px;
+  }
+
+  .business h4, .teach h4 {
+    background-color: white;
+    padding: 0 1.0rem;
+    font-size: 0.7rem;
+    border: none;
+    font-weight: 400;
+    cursor: pointer;
+  }
+
+  .business h4:hover {
+    color: var(--darkpurple);
+  }
+  
+  .teach h4:hover {
+    color: var(--darkpurple);
+  }
+
+  .fa-cart-shopping {
+    font-size: 1rem;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+
+  .login button, .sign button {
+    font-size: 0.7rem;
+    padding: 10px 9px;
+    margin-right: 10px;
+    font-weight: 600;
+    border: 2px solid var(--black);
+    cursor: pointer;
+  }
+
+  .login button {
+    background-color: white;
+  }
+
+  .login button:hover {
+    background-color: var(--lightgrey);
+  }
+
+  .sign button {
+    background-color: var(--black);
+    color: white;
+  }
+
+  .sign button:hover {
+    background-color: black;
+  }
+
+  .fa-globe {
+    padding: 10px 10px;
+    background-color: white;
+    border: 2px solid var(--black);
+    cursor: pointer;
+  }
+
+  .globe button {
+    border: none;
+  }
+
+  .fa-globe:hover {
+    background-color: var(--lightgrey);
+  }
+
+.slideshow-container {
+    max-width: 1340px;
+    position: relative;
+    margin: auto;
+    margin-top: 75px;
+  }
+  
+  .mySlides {
+    display: none;
+  }
+  
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 8px 14px;
+    color: white;
+    background-color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 40px 40px 40px 40px;
+    user-select: none;
+  }
+  
+  .next {
+    right: 15px;
+  }
+
+  .prev {
+    left: 15px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  .fade {
+    animation-name: none;
+    animation-duration: 750ms;
+    animation-delay: 10s;
+    animation-name: slide;
+    animation-duration: 10s;
+    animation-direction: normal;
+    animation-delay: 1000s;
+  }
+  
+  @keyframes fade {
+    from {left: -1000px;}
+    to {right: 1000px}
+  }
+
+.info {
+    max-width: 440px;
+    height: 200px;
+    background-color: white;
+    position: absolute;
+    top: 80px;
+    left: 75px;
+    box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.3);
+    padding: 35px 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.info h3 {
+    font-family: Georgia, sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.info p, a {
+    font-size: 0.8rem;
+}
+
+.courses {
+    max-width: 1350px;
+    padding: 50px 30px;
+    margin: auto;
+}
+
+.courses h4 {
+    font-family: Georgia, sans-serif;
+    font-size: 1.8rem;
+    color: var(--black);
+    margin-bottom: 15px;
+}
+
+.courses p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container ul {
+  list-style: none;
+  display: flex;
+}
+
+.container ul li {
+  display: flex;
+  text-align: center;
+  padding-right: 40px;
+  color: var(--darkgrey);
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background-color: white;
+  padding-bottom: 15px;
+}
+
+.container ul li.active,
+.container ul li:hover {
+    color: var(--black);
+}
+
+.container .container-content {
+    border: 1px solid var(--darkgrey);
+}
+
+.course-content {
+  margin: 35px 30px;
+}
+
+.Excel, .Web, .Javascript, .Data, .aws, .Drawing {
+  display: none;
+}
+
+.course-content h5 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.course-content p {
+  max-width: 850px;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+}
+
+.course-content button {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 10px 5px;
+  background-color: white;
+  border: 1px solid var(--black);
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.course-content button:hover {
+  background-color: var(--lightgrey);
+}
+
+.carousel-container {
+  position: relative;
+}
+
+.inner-carousel {
+  width: 100%;
+  overflow: hidden;
+}
+
+.track {
+  display: inline-flex;
+  height: 100%;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card-container {
+  width: 250px;
+  flex-shrink: 0;
+  padding-right: 10px;
+}
+
+.card-container img {
+  width: 100%;
+}
+
+.card-container h4 {
+  padding-top: 10px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  width: 232px;
+  font-family: poppins, sans-serif;
+  line-height: 1rem;
+  letter-spacing: -1px;
+  color: var(--black);
+  margin-bottom: 0;
+}
+
+.card-container h5 {
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding-top: 0;
+  color: var(--black);
+}
+
+.card-container p {
+  margin-top: 5px;
+  font-size: 0.7rem;
+  letter-spacing: -1px;
+  color: var(--grey);
+  margin-bottom: 0;
+  font-weight: 400;
+}
+
+.card-container .rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+  margin-top: 5px;
+  height: 20px;
+}
+
+.fa-star {
+  font-size: 0.75rem;
+  padding-bottom: 10px;
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--deepyellow);
+}
+
+.checked {
+  color: var(--deepyellow);
+}
+
+.rating h5 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding-right: 5px;
+}
+
+.rating h6 {
+  font-size: 0.6rem;
+  font-weight: 500;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  color: var(--darkgrey);
+}
+
+label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  background-color: var(--lightyellow);
+  padding: 5px 10px;
+}
+
+.nav button {
+  position: absolute;
+  top: 30%;
+  transform: translatey(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  outline: none;
+  background-color: var(--black);
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.nav button:hover {
+  background-color: black;
+}
+
+.nav .prev {
+  left: 0px;
+  display: none;
+}
+
+/* .nav .prev.show {
+  display: block;
+} */
+
+.nav .next {
+  right: -15px;
+}
+
+.nav .next.hide {
+  display: none;
+}
+
+.testimonials {
+  background-color:  var(--lightgrey);
+}
+
+.test {
+  padding: 50px 60px;
+}
+
+.test h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-bottom: 30px;
+}
+
+.carousel3 {
+  position: relative;
+}
+
+.inner-div {
+  width: 1292;
+  overflow: hidden;
+}
+
+.track2 {
+  display: inline-flex;
+  height: 100%;
+  transition: transform 0.2s ease-in-out;
+}
+
+.testimony {
+  width: 400px;
+  height: 331px;
+  margin-right: 20px;
+  background-color: white;
+  border: 1px solid var(--grey);
+}
+
+.testimony-div {
+  padding: 20px;
+}
+
+.testimony-inner-div {
+  height: 150px;
+}
+
+.testimony-inner-div h5 {
+  font-family: georgia, sans-serif;
+  font-size: 3rem;
+}
+
+.testimony-inner-div p, .testimony-inner-div p b {
+  font-size: 0.8rem;
+  margin-top: 0;
+  line-height: 1.2rem;
+  margin-top: -20px;
+}
+
+.name {
+  display: flex;
+  margin-top: 15px;
+}
+
+.name h4 {
+  background-color: var(--black);
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  font-size: 0.85rem;
+  text-align: center;
+  padding-top: 7px;
+  color: white;
+}
+
+.name h5 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+
+hr {
+  color: var(--lightgrey);
+  margin-top: 20px;
+}
+
+.foot-info {
+  display: flex;
+  cursor: pointer;
+  margin-top: 15px;
+} 
+
+.fa-circle-play {
+  font-size: 1.9rem;
+  color: var(--purple);
+  padding-right: 10px;
+}
+
+.div2 a {
+  text-decoration: none;
+}
+
+.div2 h4 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1rem;
+}
+
+
+
+.four {
+  margin-right: 0;
+}
+
+.students .card-container {
+  width: 260px;
+}
+
+.track2 .nav button {
+  position: absolute;
+  top: 50%;
+  right: -25px;
+  transform: translatey(-50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  outline: none;
+  background-color: var(--black);
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.students .card-container h4 {
+  padding-top: 10px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  width: 250px;
+  font-family: poppins, sans-serif;
+  line-height: 1rem;
+  letter-spacing: -1px;
+  color: var(--black);
+  margin-bottom: 0;
+}
+
+.students h4 {
+  font-family: poppins, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.top-categories {
+  padding: 40px 60px;
+}
+
+.top-categories h4 {
+  font-family: poppins, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.thumbnails {
+  background-color: var(--lightgrey);
+  width: 300px;
+  height: 310px;
+  margin-bottom: 50px;
+}
+
+.div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.div h5 {
+  position: relative;
+  top: 60px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.div img {
+  margin-top: 50px;
+  margin-left: 50px;
+  cursor: pointer;
+}
+
+.div img:hover {
+  height: 200px;
+}
+
+.featured-topic {
+  background-color: var(--lightgrey);
+}
+
+.inner-content {
+  padding: 70px 60px;
+}
+
+.inner-content h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.featured-content {
+  max-width: 1280px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.featured {
+  margin: 30px 0;
+  flex: 1;
+}
+
+.featured h4 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.featured h5 {
+  margin-top: 20px;
+  font-size: 0.8rem;
+  color: var(--purple);
+}
+
+.featured p {
+  font-size: 0.8rem;
+  margin-top: 10px;
+  color: var(--darkgrey);
+}
+
+.inner-content button {
+  padding: 10px 20px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.instructor {
+  padding: 40px 100px;
+  max-width: 1100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.instructor .one {
+  width: 400px;
+}
+
+.instructor .two {
+  width: 420px;
+}
+
+.become h3, .transform-content h4 {
+  font-family: georgia, sans-serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-top: 30px;
+  padding-top: 100px;
+  margin-bottom: 20px;
+}
+
+.become p, .biz-content p, .transform-content p {
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.become button, .biz-content button, .transform-content button {
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 10px 15px;
+  background-color: var(--black);
+  cursor: pointer;
+  color: white;
+  border: none;
+}
+
+.become button:hover {
+  background-color: black;
+}
+
+.endorsement {
+  background-color: var(--lightgrey);
+}
+
+.endorse {
+  padding: 30px 60px;
+  text-align: center;
+}
+
+.endorse h4 {
+  font-size: 1.3rem;
+  font-family: georgia, sans-serif;
+}
+
+.endorse p {
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-top: 10px;
+  color: var(--darkgrey);
+}
+
+.logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.biz-content img {
+  width: 120px;
+}
+
+.center {
+  padding: 40px 100px;
+  max-width: 1100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.udemy-biz {
+  flex-direction: row-reverse;
+}
+
+.center .one {
+  width: 400px;
+}
+
+.center .two {
+  width: 450px;
+}
+
+.biz-content {
+  margin-top: 30px;
+  padding-top: 100px;
+  margin-bottom: 20px;
+}
+
+.biz-content span {
+  font-size: 1.8rem;
+  font-weight: 400;
+  position: absolute;
+  color: var(--purple);
+}
+
+.biz-content p {
+  margin-top: 20px;
+}
+
+.transform-content h4 {
+  width: 350px;
+  padding-top: 50px;
+}
+
+.transform {
+  margin-bottom: 100px;
+}
+
+footer {
+  background-color: var(--black);
+}
+
+.footer-content {
+  padding: 30px 60px;
+}
+
+.top-content {
+  display: flex;
+}
+
+.links {
+  display: flex;
+  width: 900px;
+}
+
+.site {
+  width: 750px;
+  text-align:right;
+}
+
+.link1 {
+ flex: 1;
+}
+
+.link1 a {
+  text-decoration: none;
+  color: white;
+  font-weight: 300; 
+  display: block;
+  margin-bottom: 10px;
+}
+
+.site button {
+  width: 150px;
+  padding-right: 25px;
+  font-size: 0.75rem;
+  color: white;
+  background-color: var(--black);
+  border: solid white 1px;
+}
+
+.site .fa-globe {
+  color: white;
+  background-color: var(--black);
+}
+
+.lower-content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.lower-content img {
+  width: 100px;
+}
+
+.lower-content h6 {
+  font-size: 0.7rem;
+  color: white;
+  font-weight: 300;
+  padding-top: 20px;
+}
